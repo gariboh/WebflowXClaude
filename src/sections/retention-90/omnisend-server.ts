@@ -14,6 +14,8 @@ export const AEOH_SCOPE: OmniScope = { base: "aeo-hotels", prefix: "aeoh" };
 export const AEOC_SCOPE: OmniScope = { base: "aeo-clinics", prefix: "aeoc" };
 /* Growth Accelerator (replaces the Retention Score funnel, Nov 2026) */
 export const GA_SCOPE: OmniScope = { base: "growth-accelerator", prefix: "ga" };
+/* Growth Accelerator Sweden: own namespace, so SE contacts only enter the SE automations */
+export const GASE_SCOPE: OmniScope = { base: "growth-accelerator-se", prefix: "gase" };
 
 const propRe = (s: OmniScope) => new RegExp(`^${s.prefix}_[a-z0-9_]{1,40}$`);
 const tagRe = (s: OmniScope) => new RegExp(`^(${s.base}|${s.prefix}-[a-z0-9-]{1,40})$`);

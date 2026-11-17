@@ -12,8 +12,8 @@ export const dynamic = "force-dynamic";
    - invitee_no_show.deleted (the mark is removed):          - r90-noshow
    - invitee.created on the Growth Intro Meeting:            no-show earlier? + r90-rebooked, - r90-noshow
                                                              not booked yet? + r90-booked (stops the nurture)
-   Only acts on contacts already in Omnisend with the retention-90 or growth-accelerator tag
-   (Growth Accelerator contacts get ga-noshow / ga-rebooked / ga-booked instead); never creates one and
+   Only acts on contacts already in Omnisend with the retention-90, growth-accelerator or growth-accelerator-se tag
+   (Growth Accelerator contacts get ga-noshow / ga-rebooked / ga-booked instead, Sweden gase-*); never creates one and
    never changes their email status.
 
    Setup: the token lives only in env CALENDLY_WEBHOOK_TOKEN (Webflow Cloud). GET ?setup=1 makes
@@ -83,9 +83,9 @@ export async function POST(req: NextRequest) {
 
   const c = await omnisendFind(email);
   if (c === "error") return json({ ok: false, state: "omnisend_unreachable" }, 503); /* Calendly retries */
-  if (!c || !(c.tags.includes("retention-90") || c.tags.includes("growth-accelerator"))) return json({ ok: true, skip: "not_a_retention_contact" });
+  if (!c || !(c.tags.includes("retention-90") || c.tags.includes("growth-accelerator") || c.tags.includes("growth-accelerator-se"))) return json({ ok: true, skip: "not_a_retention_contact" });
   /* Growth Accelerator contacts (same Calendly event) get the same treatment in their own ga-* namespace */
-  const P = c.tags.includes("growth-accelerator") ? "ga" : "r90";
+  const P = c.tags.includes("growth-accelerator-se") ? "gase" : c.tags.includes("growth-accelerator") ? "ga" : "r90";
 
   const today = new Date().toISOString().slice(0, 10);
   const has = (x: string) => c.tags.includes(x);
