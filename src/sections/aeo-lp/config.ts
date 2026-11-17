@@ -3,9 +3,10 @@
 export type Funnel = "aeo-hotels" | "aeo-clinics";
 
 /* Lead email goes straight from the browser to FormSubmit, same endpoint and same subjects/fields as the
-   scandiweb.ai pages, so the lead-processing skills keep working (they match on the subject line). */
+   scandiweb.ai pages, so the lead-processing skills keep working (they match on the subject line).
+   NOTIFY_CC is FormSubmit's _cc: a comma-separated list. Iva Peradze gets every AEO lead too (17 Nov 2026). */
 export const FORM_ENDPOINT = "https://formsubmit.co/ajax/9d1b2680c9cd3f7648a04329a9ece4aa";
-export const NOTIFY_CC = "marcusopt@gmail.com";
+export const NOTIFY_CC = "marcusopt@gmail.com,iva.peradze@scandiweb.com";
 
 /* Marko's hub collector. ON since 30 Oct 2026: track.php keeps `fn` and its sessions view returns
    Retention only unless asked for an AEO funnel, so AEO visits never touch the Retention numbers.
