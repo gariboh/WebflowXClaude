@@ -18,9 +18,7 @@ export default function Page() {
     <>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-      {/* eslint-disable-next-line @next/next/no-page-custom-font */}
       <link rel="stylesheet" precedence="default" href={FONTS} />
-      {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link rel="stylesheet" precedence="default" href={assetUrl(`/forward-deployed-engineers/fde.css?v=${V}`)} />
       <main className="fde" dangerouslySetInnerHTML={{ __html: FDE_BODY_HTML }} />
       <Script src="https://js-eu1.hsforms.net/forms/embed/v2.js" strategy="afterInteractive" />
