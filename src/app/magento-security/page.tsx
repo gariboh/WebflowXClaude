@@ -9,7 +9,7 @@ import { MsecScripts } from "@/sections/magento-security/MsecScripts";
    site Header or the Webflow Footer. The markup, CSS and JS were ported together from the artifact.
    The contact form is HubSpot form 69e2d076 (portal 25724996, eu1), created for this page; its id is set in msec.js. */
 
-const V = "20261123b";
+const V = "20261123c";
 const FONTS =
   "https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Secular+One&display=swap";
 
