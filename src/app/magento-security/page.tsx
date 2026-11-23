@@ -7,9 +7,9 @@ import { MsecScripts } from "@/sections/magento-security/MsecScripts";
    from its standalone build (REDESIGNED Magento security artifact v76). The markup renders inside
    .msec, and msec.css scopes every rule under .msec, so the page's class names cannot reach the
    site Header or the Webflow Footer. The markup, CSS and JS were ported together from the artifact.
-   The contact form is a HubSpot form (portal 25724996, eu1); its id is set in msec.js. */
+   The contact form is HubSpot form 69e2d076 (portal 25724996, eu1), created for this page; its id is set in msec.js. */
 
-const V = "20261123";
+const V = "20261123b";
 const FONTS =
   "https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Secular+One&display=swap";
 
