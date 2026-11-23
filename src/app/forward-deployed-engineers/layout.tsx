@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Header } from "@/components/site/Header";
+import { LiveSiteHeader, LiveSiteFooter } from "@/components/site/LiveSiteChrome";
 
 const URL = "https://scandiweb.com/solutions/forward-deployed-engineers";
 const TITLE = "Hire forward deployed engineers for eCommerce | scandiweb";
@@ -28,8 +28,10 @@ export default function ForwardDeployedEngineersLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <>
-      <Header />
+      {/* scandiweb.com's own header and footer (the root layout skips its shared footer here: RootFooterGate) */}
+      <LiveSiteHeader />
       {children}
+      <LiveSiteFooter />
     </>
   );
 }
