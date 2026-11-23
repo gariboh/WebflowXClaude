@@ -1,5 +1,5 @@
 /* Ported from the approved Magento security artifact (v76): the page's own scripts, each run on its own,
-   plus the HubSpot contact form (portal 25724996, form 3c817cc8-1761-48cc-8e99-be9d446a0181). Hand edits are fine. */
+   plus the HubSpot contact form (portal 25724996, form 69e2d076-2561-4f0f-ba80-2cf6a17e9d92). Hand edits are fine. */
 (function(){var __d=document.addEventListener.bind(document),__w=window.addEventListener.bind(window);document.addEventListener=function(t,l,o){if(t==='DOMContentLoaded'&&document.readyState!=='loading'){Promise.resolve().then(function(){try{l.call(document);}catch(e){console.error(e);}});return;}return __d(t,l,o);};window.addEventListener=function(t,l,o){if(t==='load'&&document.readyState==='complete'){Promise.resolve().then(function(){try{l.call(window);}catch(e){console.error(e);}});return;}return __w(t,l,o);};try{
 (function(){var w=document.getElementById('what-you-get');if(!w)return;
 var its=[].slice.call(w.querySelectorAll('.it')),chats=[].slice.call(w.querySelectorAll('.msgs')),ty=w.querySelector('.typing'),tn=ty.querySelector('b'),btn=w.querySelector('[data-chat-toggle]');
@@ -293,4 +293,4 @@ new IntersectionObserver(function(es){es.forEach(function(e){inView=e.isIntersec
   }
 })();
 }catch(e){console.error(e);}finally{document.addEventListener=__d;window.addEventListener=__w;}})();
-(function(){var n=0;function mk(){var t=document.getElementById('msec-hs-form');if(!t||t.getAttribute('data-hs'))return;if(!(window.hbspt&&window.hbspt.forms)){if(n++<200)setTimeout(mk,150);return;}t.setAttribute('data-hs','1');window.hbspt.forms.create({portalId:'25724996',formId:'3c817cc8-1761-48cc-8e99-be9d446a0181',region:'eu1',css:'',submitText:'Talk to an engineer',target:'#msec-hs-form'});}mk();})();
+(function(){var n=0;function mk(){var t=document.getElementById('msec-hs-form');if(!t||t.getAttribute('data-hs'))return;if(!(window.hbspt&&window.hbspt.forms)){if(n++<200)setTimeout(mk,150);return;}t.setAttribute('data-hs','1');window.hbspt.forms.create({portalId:'25724996',formId:'69e2d076-2561-4f0f-ba80-2cf6a17e9d92',region:'eu1',css:'',submitText:'Talk to an engineer',target:'#msec-hs-form'});}mk();})();
