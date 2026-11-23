@@ -1,10 +1,11 @@
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
 
-/** DevLink output — do not lint (generated; edits should not be required for CI). */
+/** DevLink output and vendored scandiweb.com Webflow runtime (public/site-chrome/wf) — do not lint
+    (generated / third-party; edits should not be required for CI). */
 const eslintConfig = [
   {
-    ignores: ["src/webflow/**", "src/webflow.d.ts", ".next/**", ".open-next/**", ".wrangler/**", "out/**", "build/**", "next-env.d.ts", "cloudflare-env.d.ts"],
+    ignores: ["src/webflow/**", "src/webflow.d.ts", "public/site-chrome/wf/**", ".next/**", ".open-next/**", ".wrangler/**", "out/**", "build/**", "next-env.d.ts", "cloudflare-env.d.ts"],
   },
   ...nextVitals,
   ...nextTs,
