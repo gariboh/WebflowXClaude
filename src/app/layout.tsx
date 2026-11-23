@@ -5,6 +5,7 @@ import "./globals.css";
 import { DevLinkProvider } from "@/webflow/DevLinkProvider";
 import { Footer as WebflowFooter } from "@/webflow/v7Layout/Footer";
 import { EmbedScriptRunner } from "@/components/site/EmbedScriptRunner";
+import { RootFooterGate } from "@/components/site/RootFooterGate";
 
 // Same GTM container as scandiweb.com so events from these LPs land in the
 // main analytics estate. Apply at the root so every page under this app
@@ -65,12 +66,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         <DevLinkProvider>
           {children}
+          <RootFooterGate>
           <WebflowFooter
             callToActionHeadingCta1Visibility={false}
             callToActionHeadingCta2Visibility={false}
             callToActionHeadingCta3Visibility={false}
             callToActionHeadingHeadingCareerVisibility={false}
           />
+          </RootFooterGate>
         </DevLinkProvider>
         <EmbedScriptRunner />
       </body>

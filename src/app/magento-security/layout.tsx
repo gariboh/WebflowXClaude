@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Header } from "@/components/site/Header";
+import { LiveSiteHeader, LiveSiteFooter } from "@/components/site/LiveSiteChrome";
 
 const URL = "https://scandiweb.com/solutions/magento-security";
 const TITLE = "Magento security services: monthly patches and PCI DSS";
@@ -28,8 +28,10 @@ export default function MagentoSecurityLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <>
-      <Header />
+      {/* scandiweb.com's own header and footer (the root layout skips its shared footer here: RootFooterGate) */}
+      <LiveSiteHeader />
       {children}
+      <LiveSiteFooter />
     </>
   );
 }
